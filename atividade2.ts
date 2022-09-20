@@ -7,31 +7,26 @@ class Aviao {
     modelo: string
     capacidade: number;
 
-    constructor(marca: string, modelo: string, capacidade: number) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.capacidade = capacidade;
-    }
-
-    mostrarInformacoes():void {
+    mostrarInformacoes() {
         console.log(`O avião ${this.marca} ${this.modelo} tem capacidade para ${this.capacidade} passageiros.`)
     }
 }
 
-let aviao1 = {
-    marca: "Airbus",
-    modelo: "A320",
-    capacidade: 140
-}
+let av1 = new Aviao();
+av1.marca = "Airbus"
+av1.modelo = "A320"
+av1.capacidade = 140
 
-let aviao2 = {
-    marca: "Boeing",
-    modelo: "737",
-    capacidade: 180
-}
+let av2 = new Aviao();
+av2.marca = "Boeing"
+av2.modelo = "737"
+av2.capacidade = 180
 
-let av1 = new Aviao(aviao1.marca, aviao1.modelo, aviao1.capacidade);
-let av2 = new Aviao(aviao2.marca, aviao2.modelo, aviao2.capacidade);
+let av3 = new Aviao();
+av3.marca = "Embraer"
+av3.modelo = "E195"
+av3.capacidade = 132
 
 av1.mostrarInformacoes();
 av2.mostrarInformacoes();
+av3.mostrarInformacoes();

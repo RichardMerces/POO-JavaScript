@@ -8,28 +8,18 @@ class Funcionario {
     cargo: string;
     departamento: string;
     salario: number;
-    
-    constructor(nome: string, sobrenome: string, cargo: string, departamento: string, salario: number) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.cargo = cargo;
-        this.departamento = departamento;
-        this.salario = salario;
-    }
 
-    mostrarInformacoes():void {
+    mostrarInformacoes() {
         console.log(`Funcionário ${this.nome} ${this.sobrenome}, trabalha no departamento ${this.departamento} como ${this.cargo}, seu salário atual é R$${this.salario.toFixed(2)}`)
     }
 }
 
-let funcio1 = {
-    nome: "João",
-    sobrenome: "Souza",
-    cargo: "Analista",
-    departamento: "Financeiro",
-    salario: 3500.00
-}
+const f1 = new Funcionario();
 
-let f1 = new Funcionario(funcio1.nome, funcio1.sobrenome, funcio1.cargo, funcio1.departamento, funcio1.salario);
+f1.nome = "João";
+f1.sobrenome = "Souza";
+f1.cargo = "Analista";
+f1.departamento = "Financeiro";
+f1.salario = 3500.00;
 
 f1.mostrarInformacoes();

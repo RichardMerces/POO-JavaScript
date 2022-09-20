@@ -4,23 +4,24 @@ Crie uma classe produto eletrônico e apresente os atributos e métodos referent
 
 class ProdutoEletronico {
     nome: string;
+    marca: string;
     preco: number;
-    
-    constructor(nome: string, preco: number) {
-        this.nome = nome;
-        this.preco = preco;
-    }
 
-    mostrarInformacoes():void {
-        console.log(`Produto: ${this.nome}, Preço: R$${this.preco.toFixed(2)}`)
+    mostrarInformacoes(){
+        console.log(`Produto: ${this.nome}\nMarca: ${this.marca}\nPreço: R$${this.preco.toFixed(2)}\n`)
     }
 }
 
-let produto1 = {
-    nome: "Televisão",
-    preco: 4799.99
-}
+const prod1 = new ProdutoEletronico();
+prod1.nome = "TV 4k";
+prod1.marca = "Samsung"
+prod1.preco = 4799.99;
 
-let pro1 = new ProdutoEletronico(produto1.nome, produto1.preco);
+prod1.mostrarInformacoes();
 
-pro1.mostrarInformacoes();
+const prod2 = new ProdutoEletronico();
+prod2.nome = "Iphone";
+prod2.marca = "Apple";
+prod2.preco = 8999.99;
+
+prod2.mostrarInformacoes();

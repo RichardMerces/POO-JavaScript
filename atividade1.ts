@@ -4,26 +4,27 @@ Crie uma classe cliente e apresente os atributos e métodos referentes a esta cl
 
 class Cliente {
     nome: string;
-    sobrenome: string
+    sobrenome: string;
+    endereco: string;
     idade: number;
-    
-    constructor(nome: string, sobrenome: string, idade: number) {
-        this.nome = nome;
-        this.idade = idade;
-        this.sobrenome = sobrenome;
-    }
 
-    mostrarInformacoes():void {
-        console.log(`Cliente: ${this.nome} ${this.sobrenome}\nIdade: ${this.idade}`)
+    mostrarInformacoes() {
+        console.log(`Cliente: ${this.nome} ${this.sobrenome}\nIdade: ${this.idade}\nEndereço: ${this.endereco}.\n`)
     }
 }
 
-let cliente1 = {
-    nome: "José",
-    sobrenome: "Silva",
-    idade: 26
-}
-
-let cl1 = new Cliente(cliente1.nome,cliente1.sobrenome,cliente1.idade);
+const cl1 = new Cliente();
+cl1.nome = "João"
+cl1.sobrenome = "Silva"
+cl1.idade = 30
+cl1.endereco = "Rua das Palmeiras, 18"
 
 cl1.mostrarInformacoes();
+
+const cl2 = new Cliente();
+cl2.nome = "Ana"
+cl2.sobrenome = "Ferreira"
+cl2.idade = 28
+cl2.endereco = "Rua das Coqueiros, 3504"
+
+cl2.mostrarInformacoes();
